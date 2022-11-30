@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 def uppercase(str):
     low = [i for i in range(97, 123)]
     up = [j for j in range(65, 91)]
