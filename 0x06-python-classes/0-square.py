@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""This module defines an emoty class called square"""
+"""
+This module define an empty class Square
+"""
 
 
 class Square:
-
+    """
+    Is an empty class of type Square
+    Attributes:
+        None
+    """
     pass
-
-
-""" This is an emoty class without attributes"""

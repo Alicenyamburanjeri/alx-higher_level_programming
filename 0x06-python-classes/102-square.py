@@ -42,14 +42,38 @@ class Square:
         """
         return (self.__size * self.__size)
 
-    def my_print(self):
+    def __eq__(self, other):
         """
-        print in stdout the square with the character #
+        Equal to the other square
         """
-        if self.__size == 0:
-            print()
-        else:
-            for i in range(self.__size):
-                for x in range(self.__size):
-                    print("#", end="")
-                print()
+        return self.area() == other.area()
+
+    def __ne__(self, other):
+        """
+        Different to the other square
+        """
+        return self.area() != other.area()
+
+    def __gt__(self, other):
+        """
+        Greater than other square
+        """
+        return self.area() > other.area()
+
+    def __ge__(self, other):
+        """
+        Greater or equal to other square
+        """
+        return self.area() >= other.area()
+
+    def __lt__(self, other):
+        """
+        Less than the other square
+        """
+        return self.area() < other.area()
+
+    def __le__(self, other):
+        """
+        Less or equal to other square
+        """
+        return self.area() <= other.area()
