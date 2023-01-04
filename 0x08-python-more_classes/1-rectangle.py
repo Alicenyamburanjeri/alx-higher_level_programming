@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 
-This module is composed of a class that defines a rectangle
+This module is composed of a class that defines a Rectangle
+
 
 """
 
@@ -22,6 +23,17 @@ class Rectangle:
         self.height = height
 
         @property
+        def width(self):
+            """ method that returns the value of the width
+
+            Returns:
+                width of the rectangle
+
+            """
+
+            return self.__width
+
+        @width.setter
         def width(self, value):
             """ This method defines the width
 
@@ -42,7 +54,7 @@ class Rectangle:
                 raise ValueError("width must be >= 0")
             self.__width = value
 
-        @propery
+        @property
         def height(self):
             """ method that returns the value of height
 
