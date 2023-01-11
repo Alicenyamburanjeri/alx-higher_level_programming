@@ -1,7 +1,20 @@
 #!/usr/bin/python3
-"""Defines a Python class-to-JSON function."""
+"""
+Script that adds all arguments to a Python list, and then saves them to a file
+"""
 
+from sys import argv
+save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
+load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
 
-def class_to_json(obj):
-    """Return the dictionary represntation of a simple data structure."""
-    return obj.__dict__
+filename = "add_item.json"
+
+try:
+    json_list = load_from_json_file(filename)
+except FileNotFoundError:
+    json_list = []
+
+for arg in argv[1:]:
+    json_list.append(arg)
+
+save_to_json_file(json_list, filename)
