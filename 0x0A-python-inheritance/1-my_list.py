@@ -2,7 +2,7 @@
 """ Contains a class called MyList """
 
 
-Class MyList(list):
+class MyList(list):
     """ A subclass of list """
     def __init__(self):
         """ initializes the object """
