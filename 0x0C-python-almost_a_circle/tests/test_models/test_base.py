@@ -6,6 +6,7 @@ and the number of the test for that task
 (i.e 'test_17_0' for the first test of task 17)
 """
 
+
 import unittest
 import os
 from models.base import Base
@@ -386,6 +387,7 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError) as x:
             list_rectangles_output = Rectangle.load_from_file_csv("Hello")
         self.assertEqual(s, str(x.exception))
+
 
 if __name__ == '__main__':
     unittest.main()
