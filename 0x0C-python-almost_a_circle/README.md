@@ -17,14 +17,12 @@ JSON and CSV serialization/deserialization
 Unittesting
 
 Tests ✔️
-
 tests/test_models: Folder containing the following independently-developed test files:
 test_base.py
 test_rectangle.py
 test_square.py
 
 Classes 🆑
-
 Base
 Represents the "base" class for all other classes in the project. Includes:
 
