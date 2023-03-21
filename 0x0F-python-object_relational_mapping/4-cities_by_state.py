@@ -1,22 +1,26 @@
 #!/usr/bin/python3
 """
-A script lists all cities from
-the database `hbtn_0e_4_usa`.
+A script takes in an argument and
+displays all values in the states
+where `name` matches the argument
+from the database `hbtn_0e_0_usa`.
+The script should be safe from
+MySQL injections!
 """
 
 import MySQLdb as db
 from sys import argv
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     db_connect = db.connect(host="localhost", port=3306,
                             user=argv[1], passwd=argv[2], db=argv[3])
 
-    with db_connect.cursor() as db_cursor:
-        db_cursor.execute("SELECT cities.id, cities.name, states.name \
-                                FROM cities JOIN states ON cities.state_id \
-                                = states.id ORDER BY cities.id ASC")
-        rows_selected = db_cursor.fetchall()
+    db_cursor = db_connect.cursor()
+    db_cursor.execute(
+        "SELECT * FROM states WHERE name LIKE \
+                    BINARY %(name)s ORDER BY states.id ASC", {'name': argv[4]})
 
-    if rows_selected is not None:
-        for row in rows_selected:
-            print(row)
+    rows_selected = db_cursor.fetchall()
+
+    for row in rows_selected:
+        print(row)
