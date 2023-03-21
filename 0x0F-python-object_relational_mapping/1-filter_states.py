@@ -13,8 +13,8 @@ if __name__ == "__main__":
                          db=sys.argv[3],
                          port=3306)
 
-    c = db.cursor()
-    c.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
 
     for state in cur.fetchall():
         if state[1][0] == 'N':
