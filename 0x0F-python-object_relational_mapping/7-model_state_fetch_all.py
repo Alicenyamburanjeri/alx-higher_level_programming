@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """
-A script that lists all State objects from the database hbtn_0e_6_usa
-The script should take 3 arguments: mysql username, mysql password and database name
+A script that lists all State objects
+from the database hbtn_0e_6_usa
+The script should take 3 arguments:
+mysql username, mysql password and database name
 Use of the module SQLAlchemy
-Import State and Base from model_state - from model_state import Base, State
-Script should connect to a MySQL server running on localhost at port 3306
-Results must be sorted in ascending order by states.id
 """
 
 import sys

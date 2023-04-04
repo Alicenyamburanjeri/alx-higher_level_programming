@@ -1,17 +1,8 @@
 #!/usr/bin/python3
-"""
-A python file that contains the class definition of a State and an instance Base = declarative_base():
-State class:
-Inherits from Base 
-Links to the MySQL table states
-Class attribute id that represents a column of an auto-generated, unique integer, can’t be null and is a primary key
-Class attribute name that represents a column of a string with maximum 128 characters and can’t be null
-Use the module SQLAlchemy
-Script should connect to a MySQL server running on localhost at port 3306
-All classes that inherit from Base must be imported before calling Base.metadata.create_all(engine)
+"""Start link class to table in database 
 """
 import sys
-from model_state import State
+from model_state import Base, State
 
 from sqlalchemy import (create_engine)
 

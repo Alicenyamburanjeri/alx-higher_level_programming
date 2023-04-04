@@ -1,14 +1,10 @@
 #!/usr/bin/python3
 """
-A script that prints the first State object from the database hbtn_0e_6_usa
-The script should take 3 arguments: mysql username, mysql password and database name
+A script that prints the first State object
+from the database hbtn_0e_6_usa
+The script should take 3 arguments:
+mysql username, mysql password and database name
 The module SQLAlchemy must be used
-Import State and Base from model_state - from model_state import Base, State
-Script should connect to a MySQL server running on localhost at port 3306
-The state displayed must be the first in states.id
-Fetch all states from the database before displaying the result is not allowed
-If the table states is empty, print Nothing followed by a new line
-Code should not be executed when imported
 """
 import sys
 from model_state import Base, State
