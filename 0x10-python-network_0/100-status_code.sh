@@ -1,3 +1,3 @@
 #!/bin/bash
-# Displays only the status code of the response
-curl -s -o /dev/null -w "%(http_code)" "$1"
+# A bash script that displays only the status code of the response
+curl -sL -o /dev/null -w "%http_code" "$1"
